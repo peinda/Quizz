@@ -1,0 +1,233 @@
+[
+    {
+        "question": "les langages de programmation sont:",
+        "type": "choix-multiple",
+        "reponse": [
+            {
+                "valeur": "PHP",
+                "valide": "oui"
+            },
+            {
+                "valeur": "HTML",
+                "valide": "oui"
+            },
+            {
+                "valeur": "JAVASCRIPT",
+                "valide": "oui"
+            },
+            {
+                "valeur": "PYTHON",
+                "valide": "oui"
+            }
+        ],
+        "point": "5"
+    },
+    {
+        "question": "Comment appelle-t-on le virus du corona?",
+        "type": "texte",
+        "reponse": "covid19",
+        "point": "3"
+    },
+    {
+        "question": "ou se trouvent les glandes sudoripares d'un chien?",
+        "type": "choix-simple",
+        "reponse": [
+            {
+                "valeur": "Sous ses pattes",
+                "valide": "oui"
+            },
+            {
+                "valeur": "Dans sa bouche",
+                "valide": "non"
+            }
+        ],
+        "point": "4"
+    },
+    {
+        "question": "Qui fut le quarantieme president des USA ?",
+        "type": "texte",
+        "reponse": "Reagan",
+        "point": "3"
+    },
+    {
+        "question": "Quelle ville a construit le premier metro ?",
+        "type": "texte",
+        "reponse": "Londres",
+        "point": "4"
+    },
+    {
+        "question": "ou se situe le senegal ?",
+        "type": "choix-simple",
+        "reponse": [
+            
+            {
+                "valeur": "En Amerique",
+                "valide": "non"
+            },
+            {
+                "valeur": "En Asie",
+                "valide": "non"
+            },
+            {
+                "valeur": "En Afrique",
+                "valide": "oui"
+            }
+        ],
+        "point": "2"
+    },
+    {
+        "question": "Quelle est la capitale du Senegal ?",
+        "type": "choix-simple",
+        "reponse": [
+            {
+                "valeur": "Dakar",
+                "valide": "oui"
+            },
+            {
+                "valeur": "Thies",
+                "valide": "non"
+            },
+            {
+                "valeur": "saint-louis",
+                "valide": "non"
+            }
+        ],
+        "point": "5"
+    },
+    {
+        "question": "Qu'est-ce qu'une adresse IP ?",
+        "type": "texte",
+        "reponse": "Une adresse IP est un numero d'identification permanente ou provisoire d' un reseau informatique qui utilise l'Internet Protocol.",
+        "point": "2"
+    },
+    {
+        "question": "A quoi sert un serveur ?",
+        "type": "texte",
+        "reponse": "un serveur est g\u00e9n\u00e9ralement un ordinateur plus puissant que votre ordinateur de bureau habituel. Il est sp\u00e9cialement con\u00e7u pour fournir des informations et des logiciels \u00e0 d'autres ordinateurs qui lui sont reli\u00e9s via un r\u00e9seau.",
+        "point": "4"
+    },
+    {
+        "question": "Que veut dire HTML ?",
+        "type": "texte",
+        "reponse": "HyperText Markup Language  est le langage de balisage con\u00e7u pour repr\u00e9senter les pages web.",
+        "point": "4"
+    },
+    {
+        "question": "Qu'est ce que la RAM?",
+        "type": "texte",
+        "reponse": "C est la memoire vive, espace virtuelle ou evoluent les programmes quand ils sont lances.",
+        "point": "2"
+    },
+    {
+        "question": "Comment s appelle la technologie permettant de se connecter sur une borne sans fil",
+        "type": "choix-simple",
+        "reponse": [
+            {
+                "valeur": "wifi",
+                "valide": "oui"
+            },
+            {
+                "valeur": "ethernet",
+                "valide": "non"
+            }
+        ],
+        "point": "2"
+    },
+    {
+        "question": "Quel protocole fournit un service de messagerie entre differrents hotes?",
+        "type": "choix-simple",
+        "reponse": [
+            {
+                "valeur": "SMTP",
+                "valide": "oui"
+            },
+            {
+                "valeur": "SNMP",
+                "valide": "non"
+            },
+            {
+                "valeur": "FTP",
+                "valide": "non"
+            },
+            {
+                "valeur": "telnet",
+                "valide": "non"
+            }
+        ],
+        "point": "3"
+    },
+    {
+        "question": " Quel est le langage de programmation le plus utilis\u00e9 par les ing\u00e9nieurs logiciels et d\u00e9veloppeurs?",
+        "type": "choix-simple",
+        "reponse": [
+            {
+                "valeur": "Ruby",
+                "valide": "non"
+            },
+            {
+                "valeur": "JavaScript",
+                "valide": "non"
+            },
+            {
+                "valeur": "C++",
+                "valide": "non"
+            },
+            {
+                "valeur": "Java",
+                "valide": "non"
+            },
+            {
+                "valeur": "Python",
+                "valide": "oui"
+            }
+        ],
+        "point": "5"
+    },
+   
+    {
+        "question": "Quelle est la diff\u00e9rence majeure entre le langage C et le langage C++?",
+        "type": "choix-simple",
+        "reponse": [
+            {
+                "valeur": "Le C++ ne supporte pas les boucles logiques",
+                "valide": "non"
+            },
+            {
+                "valeur": "Le C ne supporte pas les variables de type \u2018char\u2019",
+                "valide": "non"
+            },
+            {
+                "valeur": "Le C++ ne supporte pas les variables bool\u00e9ennes",
+                "valide": "non"
+            },
+            {
+                "valeur": "Le C ne supporte pas les classes et les objets",
+                "valide": "oui"
+            }
+        ],
+        "point": "5"
+    },
+    
+    {
+        "question": "pour avoir une bonne sante il faut:",
+        "reponse": [
+            {
+                "valeur": "Manger",
+                "valide": "oui"
+            },
+            {
+                "valeur": "Dormir",
+                "valide": "oui"
+            },
+            {
+                "valeur": "faire du sport",
+                "valide": "oui"
+            },
+            {
+                "valeur": "parler",
+                "valide": "non"
+            }
+        ],
+        "point": "5"
+    }
+]
