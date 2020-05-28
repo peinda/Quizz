@@ -1,0 +1,104 @@
+body {
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
+background-attachment: fixed;
+min-width: 100%;
+min-height: 100%;
+}
+h2{
+font-size: 50px;
+color: white;
+text-align:center ;
+font-family: 'Open Sans', sans-serif;
+}
+.image{
+  position: absolute;
+width: 90px;
+height: 100px;
+}
+/*connexion*/
+.container{
+background: rgba(196, 196, 196, 0.15);
+margin-top: 3%;
+border-radius: 15px;
+width: 1050px;
+height: 570px;
+margin-left: 13%;
+}
+#imagequiz{
+width: 25%;
+height: 30%;
+margin-left: 38%;
+}
+#imagequiz img {
+width: 100%;
+height: 100%;
+border-radius: 15px;
+}
+.form {
+margin-top: 1%;
+width: 100%;
+height: 68%;
+
+}
+.use input{
+width: 75%;
+height: 55px;
+left: 297px;
+margin-bottom: 3%;
+margin-left: 4%;
+background:#ffffff;
+border-radius: 25px;
+text-align: center;
+font-family: Trattatello;
+font-size: 20px;
+
+}
+.use .iconify{
+background-color: #ffffff;
+width: 78px;
+height: 59px;
+left: 186px;
+border-radius: 25px;
+margin-left: 7%;
+
+}
+.pass input{
+width: 75%;
+height: 55px;
+left: 297px;
+margin-left: 4%;
+background:#ffffff;
+border-radius: 25px;
+text-align: center;
+font-family: Trattatello;
+font-size: 20px;
+}
+.pass .iconify {
+background: #ffffff;
+width: 78px;
+height: 59px;
+left: 186px;
+top: 400px;
+border-radius: 25px;
+margin-left: 7%;
+
+}
+.con{
+margin-top: 5%;
+margin-left: 45%;
+}
+button{
+  width: 200px;
+  height: 50px;
+ background-color: rgb(21, 165, 231);
+ color: white;
+ font-size: 30px;
+
+  }
+.ins{
+font-family: 'Segoe UI', 'Helvetica Neue';
+font-size: 30px;
+margin-top: 4%;
+}
