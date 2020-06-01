@@ -1,40 +1,53 @@
-
 <?php
-    
-    
+include_once("./data/connect-bd.php");
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../public/css/style.css"> 
-    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-    <link href="//db.onlinewebfonts.com/c/05289e866fe7e1e99d27a7a31f8d3b66?family=Trattatello" rel="stylesheet" type="text/css"/>
 
-</head>
-<body>
-<div class="container">
-  <div id="imagequiz"><img src="image/imagesquiz.jpg"/></div>
-  <form class="form" method="POST" action="" id="form-connect">
-    <div class="use">
-        <span class="iconify" data-icon="bx:bxs-user" data-inline="false"></span>
-        <input type="text" id="username" placeholder="login" error="error1"> 
-        <div class="er" id="error1"></div>       
-    </div>
-    <d class="pass">
-        <span class="iconify" data-icon="ri:lock-password-fill" data-inline="false"></span>
-        <input type="text" id="password" placeholder="password" error="error2">  
-        <div class="er" id="error2"></div> 
-        <div class="con">
-        <button type="submit" name="connexion">CONNEXION</button>
-        <div class="ins"><a href="index.php?lien=insjoueur"><U>S'inscrire pour jouer?</U></a></div>
+  <div class="row zone-connexion">
+    <div class="imagequiz"><img src="image/imagesquiz.jpg"/></div>
+    <div class="container d-flex align-items-center justify-content-center zone-formulaire">
+      <form class="container form" method="POST" action="" id="form-connect">
+        <div class="form-group use">
+            <span class="iconify" data-icon="bx:bxs-user" data-inline="false"></span>
+            <input type="text" id="username" name="login" placeholder="login" error="error1"> 
+            <small class="er" id="error1"></small>       
         </div>
-     </div>
-  </form>
- </div>
- </body>
- 
- 
+        <div class="form-group use">
+            <span class="iconify" data-icon="ri:lock-password-fill" data-inline="false"></span>
+            <input type="password" id="password" name="password" placeholder="password" error="error2">  
+            <small class="er" id="error2"></small>
+        </div> 
+        <div class="container con">
+            <button type="submit" name="connexion">CONNEXION</button>
+            <a href="index.php?lien=inscription">S'inscrire pour jouer?</a>
+        </div>
+      </form>
+    </div>
+  </div>
+<script>
+const inputs= document.getElementsByTagName("input");
+for(input of inputs){
+    input.addEventListener("keyup",function(e){
+    if(e.target.hasAttribute("error")){
+        var idDivError=input.getAttribute("error");
+        document.getElementById(idDivError).innerText=""
+        }     
+        })
+}
+document.getElementById("form-connect").addEventListener("submit",function(e){
+const inputs= document.getElementsByTagName("input");
+      var error=false;
+      for(input of inputs){
+        if(input.hasAttribute("error")){
+        var idDivError=input.getAttribute("error");
+        if(!input.value){
+            document.getElementById(idDivError).innerText="this field is required"
+              error=true
+          }
+      }
+    }
+    if(error){
+        e.preventDefault();
+        return false;
+    }
+  }) 
+</script>
