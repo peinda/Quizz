@@ -1,7 +1,6 @@
 <?php
 include_once("./data/inscription-bd.php");
 ?>
-
 <div class="row zone-connexion">
     <div class="container d-flex align-items-center justify-content-center zone-formulaire">
       <form class="form" method="POST" action="" id="form-login" enctype="multipart/form-data">
@@ -38,13 +37,13 @@ include_once("./data/inscription-bd.php");
         <div class=" row form-group int">
         <div class="col-md-6 col-sm-6 col-6">
             <label for="password">password</label>
-            <input type="text" name="password" class="password">
+            <input type="password" name="password" class="password">
         </div>
          </div>
         <div class="row form-group int">
         <div class="col-md-6 col-sm-6 col-6 pass2 ">
             <label for="password2">Confirm password</label>
-            <input type="text" name="password2" class="password2">
+            <input type="password" name="password2" class="password2">
         </div>
         </div>
         <div class=" row fichier">

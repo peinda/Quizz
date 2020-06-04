@@ -48,7 +48,7 @@ require_once('./data/connect-bd.php');
       }
       }else {
         if (isset($_GET['statut']) && $_GET['statut']==="logout") {
-          deconnexion();
+          
         }
       require_once('./pages/connexion.php');
     }
