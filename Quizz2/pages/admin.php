@@ -1,5 +1,5 @@
 <?php
-include_once("./data/connect-bd.php");
+// include_once("./data/connect-bd.php");
 ?>
 <div class="row zone-connexion">
     <div class=" zone-admin">

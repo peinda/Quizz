@@ -1,52 +1,45 @@
-<?php
+  <?php
+  function ConnectBD(){
 
-$host="localhost";
-$username="root";
-$password="";
-$message="";
-try{
-$connect=new PDO("mysql:host=$host; dbname=quizzbd",$username, $password);
-$connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); 
-if(isset($_POST['connexion']))
-{
-if (empty($_POST['login']) || empty($_POST['password']))
-  {
-  $message='<label>All field is required</label>';
-}
-else
-  {
-  $query = "SELECT * FROM utilisateurs WHERE login = :login AND password = :password";
-  $statement=$connect->prepare($query);
-  $statement->execute(
-    array(
-      'login' => $_POST["login"],
-      'password' => $_POST["password"]
-    )
-  );
-  $result=$statement->fetch(PDO::FETCH_ASSOC);
-
-  if($result['Profil'] == 'admin') {
-    header('location: index.php?lien=accueil');
-  }elseif($result['Profil'] == 'joueur') {
-    header('location: index.php?lien=jeux');
+    $host="localhost";
+      try{
+    $connect=new PDO("mysql:host=$host; dbname=quizzbd","root", "");
+    $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+          return  $connect;
+      }
+      catch(PDOException $e)
+      {
+          die('echec connexion');
+      }
   }
+  function UserConnect($login, $password){
+    $req =ConnectBD();
+      $query = "SELECT * FROM utilisateurs WHERE login = :login AND password = :password";
+      $statement= $req->prepare($query);
+      $statement->bindParam("login", $login, PDO::PARAM_STR);
+      $statement->bindParam("password", $password, PDO::PARAM_STR);
 
-  $count=$statement->rowCount();
-  if($count>0)
-  {
-    $_SESSION["login"]=$_POST["login"];
-  } 
-  else
-  {
-    $message='<label>login or password is wrong</label>';
+      $statement->execute(
+        array(
+          'login' => $login,
+          'password' => $password
+        )
+      );
+      if($statement-> rowCount()>0){
+        $user=$statement->fetch(PDO::FETCH_ASSOC);
+        $profil=$user['Profil'];
+        
+      }
+      if (isset($profil)) {
+        if ($profil=='admin') {
+          return 'admin';
+        }else {
+          return 'jeux';
+        }
+      }else {
+        return 'error';
+      }
+
+
   }
-}
-}
-}
-catch (PDOException $error)
-{
-$message=$error->getMessage();
-}
-
-
-    ?>
+      ?>

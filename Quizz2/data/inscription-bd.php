@@ -4,7 +4,7 @@ $username="root";
 $password="";
 $message="";
 //se connecter à mysql
-$connect=new PDO("mysql:host=$host; dbname=quizzbd",$username, $password);
+$connect=new PDO("mysql:host=$host; dbname=quizz_bd",$username, $password);
 
 //preparation de la requete d'insertion
 if(isset($_POST['sub'])){
