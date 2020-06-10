@@ -15,7 +15,7 @@
         </div> 
         <div class="container con">
             <button type="submit" name="connexion">CONNEXION</button>
-            <a href="index.php?lien=inscription">S'inscrire pour jouer?</a>
+            <a href="index.php?user=inscription">S'inscrire pour jouer?</a>
         </div>
       </form>
     </div>

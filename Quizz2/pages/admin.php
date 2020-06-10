@@ -1,5 +1,5 @@
 <?php
-// include_once("./data/connect-bd.php");
+include_once("./data/connect-bd.php");
 ?>
 <div class="row zone-connexion">
     <div class=" zone-admin">
@@ -12,22 +12,39 @@
          </div>
         <div class="col-sm-4">
         <div id="avatar"><img src="..." ></div>
-            <div id="ab"><h3>peinda</h3>
-                         <h3>diallo</h3>
+            <div id="ab"><h3>peinda/diallo</h3>
+                         
             </div>
          </div>
          </div>
          <div class="row form-group op ">
-            <div class="col-md-3  "><a href="">.col-md-4 </a></div>
-            <div class="col-md-3 ">.col-md-4 </div>
-            <div class="col-md-3 mr-auto ">.col-md-4</div>
-            <div class="col-md-3 mr-auto ">.col-md-4</div>
+            <div class="col-md-3 "><button type="button" class="btn btn-link">CREER QUESTIONS</button>
+          </div>
+          <div class="col-md-3 "><button type="button" class="btn btn-link">CREER ADMIN</button>
+          </div>
+          <div class="col-md-3 "><button type="button" class="btn btn-link">LISTE QUESTIONS</button>
+          </div>
+          <div class="col-md-3 "><button type="button" class="btn btn-link">LISTE JOUEURS</button>
+          </div>
         </div>
-        <div class="row align-items-center gd">
-        <label for="emailpetit" class="col-auto col-form-label col-form-label-sm">Question</label>
-                  <div class="col">
-                    <input type="email" class="form-control form-control-sm" id="emailpetit">
-                  </div>      
-              </div>
+        <div class="container option">
+        <?php
+            if (isset($_GET['block'])) {
+                
+                if ($_GET['block']=="creerquestion") {
+                  include ("CreerQuestion.php");
+                }
+                elseif ($_GET['block']=="inscription") {
+                    include ("inscripAdmin.php");
+                }
+                elseif ($_GET['block']=="listeJoueur") {
+                    include ("listeJoueur.php");
+                }
+                elseif ($_GET['block']=="listequestion") {
+                  include ("listequestion.php");
+                }
+            }
+        ?>
+
       </div>
 </div>
