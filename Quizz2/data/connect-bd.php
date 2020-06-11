@@ -1,6 +1,5 @@
   <?php
   function ConnectBD(){
-
     $host="localhost";
       try{
     $connect=new PDO("mysql:host=$host; dbname=quizzbd","root", "");
@@ -12,6 +11,7 @@
           die('echec connexion');
       }
   }
+
   function UserConnect($login, $password){
     $req =ConnectBD();
       $query = "SELECT * FROM utilisateurs WHERE login = :login AND password = :password";
@@ -27,7 +27,7 @@
       );
       if($statement-> rowCount()>0){
         $user=$statement->fetch(PDO::FETCH_ASSOC);
-        $profil=$user['Profil'];
+        $profil=$user['profil'];
         
       }
       if (isset($profil)) {
@@ -39,7 +39,6 @@
       }else {
         return 'error';
       }
-
 
   }
       ?>

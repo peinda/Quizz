@@ -19,7 +19,7 @@ $(document).ready(function(){
                         window.location=`index.php?user=admin`;
                     }
                     else if (result == '  jeux') {
-                        window.location=`index.php?user=joueur`
+                        window.location=`index.php?user=joueur`;
                     }
                     else{
                         alert('login ou mot de passe incorrect');

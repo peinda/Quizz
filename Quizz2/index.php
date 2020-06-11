@@ -28,6 +28,9 @@
       elseif($_GET['user'] == 'joueur'){
         require_once('./pages/jeux.php');
       }
+      elseif($_GET['user'] == 'inscription'){
+        require_once('./pages/inscription.php');
+      }
     }else{
       require_once ('./pages/connexion.php');
     }
